@@ -310,7 +310,7 @@ Game.Level1.prototype = {
     botonpausa=this.input.keyboard.addKey(Phaser.Keyboard.P);
 
     musica = this.add.audio('musica');
-    this.musica.volume=0.5;
+    musica.volume=0.5;
     musica.play();
     player.scale.setTo(2,2);
    
@@ -1472,7 +1472,6 @@ Game.Level1.prototype = {
       {
         pntgr.kill();
       }
-    
   }
   },
   eliminabalas:function()
