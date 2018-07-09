@@ -309,6 +309,7 @@ Game.Level1.prototype = {
   
     weapon.bulletSpeed = 300;
     weapon.trackSprite(player,15,30, true);
+
     firebutton= this.input.keyboard.addKey(Phaser.Keyboard.K);
     botonpausa=this.input.keyboard.addKey(Phaser.Keyboard.P);
 
@@ -1437,7 +1438,7 @@ Game.Level1.prototype = {
   {
     livingdrops.length=0;
     vidap.forEachAlive(function(vidapq){livingdrops.push(vidapq)});
-    for(var i=0;livingdrops.length;i++)
+    for(var i=0;i<livingdrops.length;i++)
     {
       var vidapqn=livingdrops[i];
       if(!vidapqn.inCamera)
@@ -1448,7 +1449,7 @@ Game.Level1.prototype = {
     }
     livingdrops1.length=0;
     vidag.forEachAlive(function(vidagr){livingdrops1.push(vidagr)});
-    for(var i=0;livingdrops1.length;i++)
+    for(var i=0;i<livingdrops1.length;i++)
     {
       var vidagrd=livingdrops1[i];
       if(!vidagrd.inCamera)
@@ -1458,7 +1459,7 @@ Game.Level1.prototype = {
     }
     livingdrops2.length=0;
     puntosp.forEachAlive(function(puntp){livingdrops2.push(puntp)});
-    for(var i=0;livingdrops2.length;i++)
+    for(var i=0;i<livingdrops2.length;i++)
     {
       var pntspq=livingdrops2[i];
       if(!pntspq.inCamera)
@@ -1468,7 +1469,7 @@ Game.Level1.prototype = {
     }
     livingdrops3.length=0;
     puntosg.forEachAlive(function(puntg){livingdrops3.push(puntg)});
-    for(var i=0;livingdrops3.length;i++)
+    for(var i=0;i<livingdrops3.length;i++)
     {
       var pntgr=livingdrops3[i];
       if(!pntgr.inCamera)
@@ -1503,6 +1504,6 @@ Game.Level1.prototype = {
   finjuego:function(player,objeto)
   {
     objeto.kill();
-    this.state.start('Boot');
+    this.state.restart('MainMenu');
   },
 }
