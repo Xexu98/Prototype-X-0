@@ -113,9 +113,8 @@ var livingdrops2=[];
 var livingdrops3=[];
 var tiempoespera;
 
-var texto;
-var textovidas;
-var textopuntos;
+var respX=570;
+var respY=8110;
 ///////////FINAL BOSS///////////////////////////////////////////////////////////////////////////////////
 
 var finalboss;
@@ -662,7 +661,7 @@ Game.Level1.prototype = {
   },
 
   ResetPosition:function() {
-    player.reset(570,8100);
+    player.reset(respX,respY);
     vidas=vidas-1;
     if(vidas<=-1)
     {
@@ -672,7 +671,7 @@ Game.Level1.prototype = {
   },
 
   ResetPositionP:function() {
-    player.reset(570,8100);
+    player.reset(respX,respY);
   },
   SubirEscaleras:function() {
 
@@ -1195,6 +1194,8 @@ Game.Level1.prototype = {
     {
       map.replace(-3,13);
       map.setCollision(13,true);
+      respX=10500;
+      respY=3000;
       zonabo=false;
     }
   },
