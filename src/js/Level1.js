@@ -447,7 +447,7 @@ Game.Level1.prototype = {
     {
     this.eliminabalas();
     }
-    if(this.time.now>=tiempoespera){
+    if(this.time.now>tiempoespera){
     this.eliminadrops();
     }
     this.bossintocable();
