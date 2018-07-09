@@ -1378,27 +1378,27 @@ Game.Level1.prototype = {
     drop=this.numeroAleatorio(1,11);
     if(drop>=5 && drop<=6)
     {
-      var enemydrops=vidap.create(enemmydrop.body.x,enemmydrop.body.y,'vidapq');
-      enemydrops.body.gravity.y =300;
-      enemydrops.scale.setTo(2,2);
+      var vidapq=vidap.create(enemmydrop.body.x,enemmydrop.body.y,'vidapq');
+      vidapq.body.gravity.y =300;
+      vidapq.scale.setTo(2,2);
     }
     if(drop===7)
     {
-      var enemydrops=vidag.create(enemmydrop.body.x,enemmydrop.body.y,'vidagr');
-      enemydrops.body.gravity.y =300;
-      enemydrops.scale.setTo(2,2);
+      var vidagr=vidag.create(enemmydrop.body.x,enemmydrop.body.y,'vidagr');
+      vidagr.body.gravity.y =300;
+      vidagr.scale.setTo(2,2);
     }
     if(drop>=8 && drop<=9)
     {
-      var enemydrops= puntosp.create(enemmydrop.body.x,enemmydrop.body.y,'puntospq');
-      enemydrops.body.gravity.y =300;
-      enemydrops.scale.setTo(2,2);
+      var puntp= puntosp.create(enemmydrop.body.x,enemmydrop.body.y,'puntospq');
+      puntp.body.gravity.y =300;
+      puntp.scale.setTo(2,2);
     }
     if(drop===10)
     {
-      var enemydrops= puntosg.create(enemmydrop.body.x,enemmydrop.body.y,'puntosgr');
-      enemydrops.body.gravity.y =300;
-      enemydrops.scale.setTo(2,2);
+      var puntg= puntosg.create(enemmydrop.body.x,enemmydrop.body.y,'puntosgr');
+      puntg.body.gravity.y =300;
+      puntg.scale.setTo(2,2);
     }
     tiempoespera=this.time.now+100;
   },
