@@ -108,6 +108,9 @@ var puntosg;
 
 var eliminabalastimer;
 var livingdrops=[];
+var livingdrops1=[];
+var livingdrops2=[];
+var livingdrops3=[];
 var tiempoespera;
 
 var texto;
@@ -1443,31 +1446,31 @@ Game.Level1.prototype = {
       }
 
     }
-    livingdrops.length=0;
-    vidag.forEachAlive(function(vidagr){livingdrops.push(vidagr)});
-    for(var i=0;livingdrops.length;i++)
+    livingdrops1.length=0;
+    vidag.forEachAlive(function(vidagr){livingdrops1.push(vidagr)});
+    for(var i=0;livingdrops1.length;i++)
     {
-      var vidagrd=livingdrops[i];
+      var vidagrd=livingdrops1[i];
       if(!vidagrd.inCamera)
       {
         vidagrd.kill();
       }
     }
-    livingdrops.length=0;
-    puntosp.forEachAlive(function(puntp){livingdrops.push(puntp)});
-    for(var i=0;livingdrops.length;i++)
+    livingdrops2.length=0;
+    puntosp.forEachAlive(function(puntp){livingdrops2.push(puntp)});
+    for(var i=0;livingdrops2.length;i++)
     {
-      var pntspq=livingdrops[i];
+      var pntspq=livingdrops2[i];
       if(!pntspq.inCamera)
       {
         pntspq.kill();
       }
     }
-    livingdrops.length=0;
-    puntosg.forEachAlive(function(puntg){livingdrops.push(puntg)});
-    for(var i=0;livingdrops.length;i++)
+    livingdrops3.length=0;
+    puntosg.forEachAlive(function(puntg){livingdrops3.push(puntg)});
+    for(var i=0;livingdrops3.length;i++)
     {
-      var pntgr=livingdrops[i];
+      var pntgr=livingdrops3[i];
       if(!pntgr.inCamera)
       {
         pntgr.kill();
